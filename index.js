@@ -188,7 +188,7 @@
     // huruf j
     var thetaLoc = gl.getUniformLocation(program, 'theta'); 
     var transLoc = gl.getUniformLocation(program, 'trans');
-    var thetaA = [10, 20, 0];
+    var theta = [10, 20, 0];
     var trans = [0, 0, 0]; 
     var X = 0.0080;
     var Y = 0.0090;
@@ -202,25 +202,25 @@
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.useProgram(program);
 
-      if(trans[0] >= 0.4*0.8 || trans[0] <= -0.3*0.8 ){
+      if(trans[0] >= 0.4*0.7 || trans[0] <= -0.3*0.7 ){
         X *= -1;
       }
       trans[0] += X;
 
-      if(trans[1] >= 0.6*0.8 || trans[1] <= -0.8*0.8 ){
+      if(trans[1] >= 0.6*0.7 || trans[1] <= -0.8*0.7 ){
         Y *= -1;
       }
       trans[1] += Y;
 
-      if(trans[2] >= 0.7*0.8 || trans[2] <= -0.6*0.8){
+      if(trans[2] >= 0.7*0.7 || trans[2] <= -0.6*0.7){
         Z *= -1;
       }
       trans[2] += Z;
 
       gl.uniform3fv(transLoc, trans);
 
-      thetaA[1] += 0.180;
-      gl.uniform3fv(thetaLoc, thetaA);
+      theta[1] += 0.180;
+      gl.uniform3fv(thetaLoc, theta);
 
       kanan();
       requestAnimationFrame(render);
