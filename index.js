@@ -202,12 +202,12 @@
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.useProgram(program);
 
-      if(trans[0] >= 0.4*0.7 || trans[0] <= -0.3*0.7 ){
+      if(trans[0] >= 0.4*0.7 || trans[0] <= -0.3*0.7){
         X *= -1;
       }
       trans[0] += X;
 
-      if(trans[1] >= 0.6*0.7 || trans[1] <= -0.8*0.7 ){
+      if(trans[1] >= 0.6*0.7 || trans[1] <= -0.8*0.7){
         Y *= -1;
       }
       trans[1] += Y;
