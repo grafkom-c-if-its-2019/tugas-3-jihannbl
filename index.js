@@ -198,7 +198,9 @@
     var thetaLocCube = gl.getUniformLocation(program2, 'theta');
 
     function render(){
-      gl.clearColor(0.9137, 0.7137, 0.651, 1.0);
+      // gl.clearColor(0.9137, 0.7137, 0.651, 1.0);
+      // gl.clearColor(0.0, 0.0, 0.0, 1.0);
+      gl.clearColor(0.0667, 0.2196, 0.2588, 1.0);
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.useProgram(program);
 
@@ -219,7 +221,7 @@
 
       gl.uniform3fv(transLoc, trans);
 
-      theta[1] += 0.180;
+      theta[1] += 0.034;
       gl.uniform3fv(thetaLoc, theta);
 
       kanan();
